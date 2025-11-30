@@ -1,0 +1,111 @@
+body {
+    background-color: #0c538b;
+    margin: 0;
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    color: #fff;
+}
+
+nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+nav a:not(:last-child)::after {
+    content: "";
+    background-color: #fff;
+    width: 1px;
+    height: 40px;
+    opacity: 0.5;
+    margin: 10px 0;
+}
+
+section {
+    filter: saturate(0%);
+    opacity: 0.3;
+    height: 100vh;
+}
+
+#section-1 {
+    background-image: url("images/unsplash/shuttersnap-mf-o1E7omzk-unsplash.jpg");
+    
+    
+}
+
+#section-2 {
+    background-image: url("images/unsplash/zlqmyzin-0gPydm0hnzY-unsplash.jpg");
+}
+
+#section-3 {
+    background-image: url("images/unsplash/caroline-grondin-35bE_njbG9E-unsplash.jpg");
+}
+
+#section-4 {
+    background-image: url("images/unsplash/mike-hindle-Vyl3kJ0ihhA-unsplash.jpg");
+}
+
+
+h1{
+    color: #fff; 
+    font-size: clamp(4rem, 10vw, 10rem); /* Minimum 10rem, preferred 5vw, maximum rem    font-size: 5vw; /* 5% of the viewport width */  
+}
+
+/* 
+#section-1 h1{
+    display: flex;
+    color: #fff;
+    text-align: center;
+    place-content: center center;
+    font-size: 10rem;
+} */
+
+#section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* place-content: center center; */
+    border: 5px solid red;
+}
+
+
+
+#section-2 {
+    display: flex;
+    color: #fff;
+   
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    border: 5px solid red;
+}
+
+
+
+#section-3 {
+    display: flex;
+    color: #fff;
+   
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    border: 5px solid red;
+}
+
+ 
+#section-4 {
+    display: flex;
+    color: #fff;
+   
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    border: 5px solid red;
+}
+
