@@ -180,3 +180,19 @@ nav p#logo {
 .intro-title .first-char {
   transform-origin: top left;
 }
+
+/* Initial animation states */
+.tag .word {
+  transform: translateY(100%);
+}
+
+.preloader .intro-title .char span,
+.preloader .outro-title .char span {
+  transform: translateY(-100%);
+}
+
+.split-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100svh;
+}

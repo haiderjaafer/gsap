@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #fff;
+  background-color: #070707;
+  padding: 3rem 4rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-block-end: 1em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.cards {
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px 100px 100px; */
+  /* grid-template-columns: repeat(5, 100px); */
+  /* grid-template-columns: repeat(5, 1fr); */
+  /* grid-template-columns: repeat(5, minmax(100px, 1fr)); */
+  margin-block-end: 2rem;
+}
+
+.grid-auto-fill {
+  /*
+    If total width is 721px
+    Minimum width of a column is 100px
+    Number of columns a row can have = 7
+    Leftover space = 21px
+    21 / 7 = 3
+    Actual width of a column = 100 + 3 = 103
+  */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.grid-auto-fit {
+  /*
+    If total width is 721px
+    Minimum width of a column is 100px
+    Actual width of a column = 721 / 5 = 144.2
+  */
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  /* display: none; */
+}
+
+.grid-auto-fill .card {
+  background-color: #ac9afd;
+}
+
+.grid-auto-fit .card {
+  background-color: #f7a0c1;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  font-size: 1.5rem;
+  color: #070707;
+  border: 5px solid currentColor;
+  border-radius: 0.5rem;
+  outline: 1px dotted currentColor;
+  outline-offset: -15px;
+}
