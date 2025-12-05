@@ -1,0 +1,260 @@
+/* ====================================================================
+   THE REGENERATION SITE - STYLESHEET
+   A modern, animated portfolio/gallery website with GSAP integration
+   ==================================================================== */
+
+/* ===== UNIVERSAL RESET ===== */
+/* Resets default browser styling for consistency across all browsers */
+* {
+    margin: 0;              /* Remove default margins */
+    padding: 0;             /* Remove default padding */
+    box-sizing: border-box; /* Include padding/border in element dimensions */
+}
+
+/* ===== BASE HTML & BODY STYLING ===== */
+/* Sets up full viewport coverage with dark theme */
+html,
+body {
+    width: 100vw;              /* Full viewport width */
+    height: 100vh;             /* Full viewport height */
+    overflow: hidden;          /* Prevents scrollbars */
+    background: #141414;       /* Dark charcoal background */
+    font-family: "Neue Montreal"; /* Custom font (ensure it's loaded) */
+}
+
+/* ===== IMAGE STYLING ===== */
+/* Ensures all images cover their containers properly */
+img {
+    width: 100%;               /* Full width of parent */
+    height: 100%;              /* Full height of parent */
+    object-fit: cover;         /* Crops to fill without distortion */
+}
+
+/* ===== CONTENT OVERLAY WRAPPER ===== */
+/* Creates the overlay layer that sits above the image gallery */
+.content {
+    position: relative;        /* Positioning context for child elements */
+    width: 100%;               /* Full width */
+    height: 100%;              /* Full height */
+    z-index: 2;                /* Ensures content appears above gallery */
+}
+
+/* ===== NAVIGATION BAR ===== */
+/* Fixed navigation at the top of the page */
+nav {
+    position: fixed;           /* Stays in place during scroll (though scroll is disabled) */
+    width: 100%;               /* Full width */
+    padding: 2.5em;            /* 2.5em padding on all sides */
+    display: flex;             /* Flexbox for centering */
+    justify-content: center;   /* Center items horizontally */
+    align-items: center;       /* Center items vertically */
+    gap: 3em;                  /* 3em space between nav items */
+}
+
+/* ===== NAVIGATION ITEMS ===== */
+/* Individual navigation link containers with clip-path effect */
+.nav-item {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Rectangle clip (for animation reveal) */
+}
+
+/* ===== NAVIGATION LINKS ===== */
+/* Styling for navigation anchor tags */
+.nav-item a {
+    position: relative;        /* Enables top offset positioning */
+    top: 20px;                 /* Initial offset (animated to 0 by GSAP) */
+    text-decoration: none;     /* Remove underline */
+    color: #666;               /* Medium gray text */
+    opacity: 0.35;             /* Semi-transparent by default */
+}
+
+/* ===== ACTIVE NAVIGATION LINK ===== */
+/* Highlights the currently active navigation item */
+.nav-item a#active {
+    opacity: 1;                /* Full opacity for active link */
+}
+
+/* ===== HERO SECTION ===== */
+/* Main title area centered on the page */
+.hero {
+    position: absolute;        /* Positioned independently of document flow */
+    width: 95%;                /* 95% of viewport width */
+    top: 50%;                  /* Vertical center */
+    left: 50%;                 /* Horizontal center */
+    transform: translate(-50%, -50%); /* Centers element perfectly */
+    display: flex;             /* Flexbox layout */
+    align-items: center;       /* Vertically center items */
+    color: #666;               /* Medium gray text */
+}
+
+/* ===== HERO ICONS ===== */
+/* Decorative icons on left and right of title */
+.icon,
+.icon-2 {
+    flex: 0.5;                 /* Takes up half the space of title */
+    padding: 0 5em;            /* Horizontal padding */
+    font-size: 30px;           /* Icon size */
+    opacity: 0.5;              /* Semi-transparent */
+}
+
+/* ===== RIGHT ICON ALIGNMENT ===== */
+/* Aligns the right icon to the right side */
+.icon-2 {
+    text-align: right;         /* Right-align the icon */
+}
+
+/* Initial scale for icons (animated to 1 by GSAP) */
+.icon ion-icon,
+.icon-2 ion-icon {
+    transform: scale(0);       /* Start invisible (GSAP animates to scale 1) */
+}
+
+/* ===== HERO TITLE ===== */
+/* Main heading/title styling */
+.title {
+    flex: 2;                   /* Takes up double the space of icons */
+    text-align: center;        /* Center text */
+    font-size: 40px;           /* Large font size */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Rectangle clip for reveal animation */
+}
+
+/* ===== FOOTER ===== */
+/* Footer section at bottom of page */
+footer {
+    position: absolute;        /* Independent positioning */
+    bottom: 0;                 /* Aligned to bottom */
+    width: 100%;               /* Full width */
+}
+
+/* ===== PREVIEW THUMBNAILS ===== */
+/* Container for preview images at bottom right */
+.preview {
+    position: absolute;        /* Positioned independently */
+    bottom: 2em;               /* 2em from bottom */
+    right: 2em;                /* 2em from right */
+    display: flex;             /* Flexbox for horizontal layout */
+    gap: 0.3em;                /* Small gap between images */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Clip for animation reveal */
+}
+
+/* ===== PREVIEW IMAGES ===== */
+/* Individual thumbnail styling */
+.preview img {
+    position: relative;        /* Enables top offset */
+    top: 100px;                /* Initial offset (animated to 0 by GSAP) */
+    width: 80px;               /* Fixed width */
+    height: 50px;              /* Fixed height (thumbnail aspect ratio) */
+}
+
+/* ===== SLIDE NUMBER INDICATOR ===== */
+/* Shows current slide/page number */
+.slide-num {
+    margin: 3em 0;             /* Top and bottom margin */
+    text-align: center;        /* Center text */
+    color: #666;               /* Medium gray text */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Clip for animation */
+}
+
+/* ===== SLIDE NUMBER PARAGRAPH ===== */
+/* Individual styling for slide number text */
+.slide-num p {
+    position: relative;        /* Enables top offset */
+    top: 30px;                 /* Initial offset (animated to 0 by GSAP) */
+}
+
+/* ===== MAIN CONTAINER ===== */
+/* Gallery container holding all image columns */
+.container {
+    position: fixed;           /* Fixed positioning */
+    width: 100%;               /* Full width */
+    height: 100%;              /* Full height */
+    display: flex;             /* Flexbox layout */
+    gap: 1em;                  /* Gap between columns */
+}
+
+/* ===== COLUMN STYLING ===== */
+/* Individual column containers for images */
+.col {
+    flex: 1;                   /* Each column takes equal space */
+}
+
+/* Nested selector for columns within container */
+.container .col {
+    position: relative;        /* Positioning context */
+    flex: 1;                   /* Equal space distribution */
+    width: 100%;               /* Full width */
+    display: flex;             /* Flexbox for vertical stacking */
+    flex-direction: column;    /* Stack items vertically */
+    gap: 1em;                  /* Gap between items */
+}
+
+/* ===== ITEM CONTAINERS ===== */
+/* Individual image containers within columns */
+.item {
+    width: 100%;               /* Full width of column */
+    height: 100%;              /* Full height available */
+}
+
+/* Nested selector for items within columns */
+.col .item {
+    position: relative;        /* Positioning context for animation */
+    flex: 1;                   /* Items take equal space in column */
+    width: 100%;               /* Full width */
+    background: gray;          /* Fallback background while images load */
+    overflow: hidden;          /* Hide image overflow */
+}
+
+/* ===== INITIAL POSITIONING FOR ANIMATIONS ===== */
+/* Sets starting positions for GSAP animations */
+
+/* Columns 1, 3, 5 start below viewport */
+.c-1,
+.c-3,
+.c-5 {
+    top: 100%;                 /* Positioned off-screen below */
+}
+
+/* Items in columns 1, 3, 5 start below */
+.c-1 .item,
+.c-3 .item,
+.c-5 .item {
+    top: 100%;                 /* Start below viewport (for upward animation) */
+}
+
+/* Items in columns 2, 4 start above viewport */
+.c-2 .item,
+.c-4 .item {
+    top: -100%;                /* Start above viewport (for downward animation) */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Adjustments for screens smaller than 900px width */
+@media (max-width: 900px) {
+    /* Adjust slide number for mobile */
+    .slide-num {
+        text-align: left;      /* Left-align text */
+        padding-left: 2em;     /* Add left padding */
+        margin-bottom: 2.5em;  /* Increase bottom margin */
+    }
+    
+    /* Reduce title size for mobile */
+    .title {
+        font-size: 30px;       /* Smaller font for readability on small screens */
+    }
+    
+    /* Smaller preview thumbnails for mobile */
+    .preview img {
+        width: 60px;           /* Reduced width */
+        height: 40px;          /* Reduced height */
+    }
+    
+    /* Smaller icons for mobile */
+    .icon,
+    .icon-2 {
+        padding: 0 1em;        /* Less horizontal padding */
+        font-size: 16px;       /* Smaller icon size */
+    }
+}
+
+/* ====================================================================
+   END OF STYLESHEET
+   ==================================================================== */
