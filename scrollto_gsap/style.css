@@ -1,5 +1,5 @@
 body {
-    background-color: #0c538b;
+    /* background-color: #0c538b; */
     margin: 0;
 }
 
@@ -28,27 +28,31 @@ nav a:not(:last-child)::after {
 }
 
 section {
-    filter: saturate(0%);
-    opacity: 0.3;
+    /* filter: saturate(0%);
+    opacity: 0.3; */
     height: 100vh;
 }
 
 #section-1 {
-    background-image: url("images/unsplash/shuttersnap-mf-o1E7omzk-unsplash.jpg");
+    /* background-image: url("images/unsplash/shuttersnap-mf-o1E7omzk-unsplash.jpg"); */
+    background-color:green;
     
     
 }
 
 #section-2 {
-    background-image: url("images/unsplash/zlqmyzin-0gPydm0hnzY-unsplash.jpg");
+    /* background-image: url("images/unsplash/zlqmyzin-0gPydm0hnzY-unsplash.jpg"); */
+    background-color: gold;
 }
 
 #section-3 {
     background-image: url("images/unsplash/caroline-grondin-35bE_njbG9E-unsplash.jpg");
+    background-color: blueviolet;
 }
 
 #section-4 {
     background-image: url("images/unsplash/mike-hindle-Vyl3kJ0ihhA-unsplash.jpg");
+    background-color: cornflowerblue;
 }
 
 

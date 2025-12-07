@@ -17,7 +17,7 @@ html,
 body {
     width: 100vw;              /* Full viewport width */
     height: 100vh;             /* Full viewport height */
-    overflow: hidden;          /* Prevents scrollbars */
+    /* overflow: hidden;          Prevents scrollbars */
     background: #141414;       /* Dark charcoal background */
     font-family: "Neue Montreal"; /* Custom font (ensure it's loaded) */
 }
@@ -84,7 +84,10 @@ nav {
     display: flex;             /* Flexbox layout */
     align-items: center;       /* Vertically center items */
     color: #666;               /* Medium gray text */
+    border:1px solid red ;
 }
+
+
 
 /* ===== HERO ICONS ===== */
 /* Decorative icons on left and right of title */
