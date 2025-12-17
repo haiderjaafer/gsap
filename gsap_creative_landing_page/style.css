@@ -1,0 +1,222 @@
+/* Universal selector - applies to all elements */
+* {
+    margin: 0;
+    /* Removes default margin from all elements for consistent spacing */
+    
+    padding: 0px;
+    /* Removes default padding from all elements */
+    
+    box-sizing: border-box;
+    /* Includes padding and border in element's total width/height */
+    
+    font-family: poppins;
+    /* Sets Poppins as the font family for all text */
+}
+
+/* Body element styling */
+body {
+    overflow: hidden;
+    /* Hides scrollbars and prevents scrolling */
+    
+    background-color: #fff;
+    /* Sets white background color for the entire page */
+}
+
+/* Remove default text decoration from anchor tags */
+body a {
+    text-decoration: none;
+    /* Removes underline from links */
+}
+
+/* Main container styling */
+.container {
+    width: 95%;
+    /* Container takes 95% of viewport width */
+    
+    height: 100%;
+    /* Container takes 100% of viewport height */
+    
+    margin: auto;
+    /* Centers container horizontally with auto left/right margins */
+}
+
+/* Menu/header section styling */
+.menu {
+    margin: 15px 0px;
+    /* Adds 15px top and bottom margin, 0 left/right */
+}
+
+/* Logo container styling */
+.logo {
+    /* Logo container for brand identity */
+}
+
+/* Logo image styling */
+.logo img {
+    width: 150px;
+    /* Sets logo width to 150 pixels */
+    
+    object-fit: cover;
+    /* Maintains image aspect ratio while filling container */
+    
+    cursor: pointer;
+    /* Changes cursor to pointer on hover for clickable indication */
+}
+
+/* Wrapper container styling - main content area */
+.wrapper {
+    width: 100%;
+    /* Wrapper takes full width of parent container */
+    
+    display: grid;
+    /* Uses CSS Grid layout system */
+    
+    grid-template-columns: 50% auto;
+    /* Creates two columns: first 50% width, second auto (remaining space) */
+}
+
+/* Left wrapper section styling */
+.lwrap {
+    width: 90%;
+    /* Left section takes 90% of its grid column width */
+}
+
+/* Heading (h1) styling */
+.lwrap h1 {
+    font-size: 50px;
+    /* Large font size for main heading */
+    
+    font-weight: 300;
+    /* Light font weight for elegant appearance */
+    
+    text-transform: capitalize;
+    /* Capitalizes first letter of each word */
+    
+    line-height: 110%;
+    /* Reduces line height to 110% for tighter spacing */
+    
+    color: rgba(20, 19, 19, 1);
+    /* Almost black color with full opacity */
+    
+    margin-top: 40px;
+    /* Adds 40px space above heading */
+}
+
+/* Span element inside heading - for highlighted text */
+.lwrap h1 span {
+    font-weight: bold;
+    /* Makes "3D Graphics" text bold for emphasis */
+}
+
+/* Paragraph styling in left wrapper */
+.lwrap p {
+    padding: 20px 80px 30px 0px;
+    /* Padding: 20px top, 80px right, 30px bottom, 0px left */
+}
+
+/* Button container styling */
+.button {
+    display: grid;
+    /* Uses grid layout for button arrangement */
+    
+    grid-template-columns: 30% auto;
+    /* Two columns: first 30%, second auto width */
+    
+    grid-gap: 20px;
+    /* 20px gap between grid items */
+    
+    margin-top: 30px;
+    /* 30px space above button section */
+}
+
+/* Primary button/link styling */
+.button a {
+    display: grid;
+    /* Uses grid for centering content */
+    
+    place-items: center;
+    /* Centers content both horizontally and vertically */
+    
+    background: #000;
+    /* Black background color */
+    
+    color: #fff;
+    /* White text color */
+    
+    width: 100%;
+    /* Full width of grid column */
+    
+    height: 50px;
+    /* Fixed height of 50 pixels */
+    
+    font-size: 18px;
+    /* 18px font size for button text */
+    
+    position: relative;
+    /* Allows absolute positioning of child elements */
+    
+    font-weight: 500;
+    /* Medium font weight */
+    
+    border-radius: 20px;
+    /* Rounded corners with 20px radius */
+}
+
+/* Video button container styling */
+.button .vdbtn {
+    display: flex;
+    /* Flexbox layout for horizontal arrangement */
+    
+    place-items: center;
+    /* Centers items vertically */
+    
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+/* Video button paragraph styling */
+.button .vdbtn p {
+    font-size: 20px;
+    /* 20px font size */
+    
+    padding: 0px 10px;
+    /* 0px top/bottom, 10px left/right padding */
+}
+
+/* Video button image styling */
+.button .vdbtn img {
+    width: 35px;
+    /* 35px width for video icon */
+}
+
+/* Right wrapper section styling - image carousel area */
+.rwrap {
+    display: flex;
+    /* Flexbox for horizontal image arrangement */
+}
+
+/* Individual image group styling */
+.rwrap .img1 {
+    transform: rotate(20deg);
+    /* Rotates image group 20 degrees clockwise for dynamic effect */
+    
+}
+
+/* Image styling within image groups */
+.rwrap .img1 img {
+    width: 235px;
+    /* Fixed width of 235 pixels */
+    
+    height: 300px;
+    /* Fixed height of 300 pixels */
+    
+    object-fit: cover;
+    /* Crops/scales image to fill container */
+    
+    margin: 3px 15px;
+    /* 3px top/bottom margin, 15px left/right margin for spacing */
+    border-radius: 30px;
+    /* outline: 1px solid transparent; */
+    will-change: transform;
+   
+}

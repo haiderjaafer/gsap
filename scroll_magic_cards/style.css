@@ -1,0 +1,220 @@
+/* Universal Reset - applies to all elements */
+* {
+    margin: 0;
+    /* Removes default margin from all elements for consistent spacing */
+    
+    padding: 0;
+    /* Removes default padding from all elements */
+    
+    box-sizing: border-box;
+    /* Includes padding and border in element's total width/height calculation */
+}
+
+/* Body element styling - base styles for entire page */
+body {
+    background-color: #e4e4e4;
+    /* Light gray background color for the entire page */
+    
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* Font stack - tries Segoe UI first, falls back to alternatives */
+    /* Sans-serif fonts for modern, clean appearance */
+}
+
+/* Section showcase styling - main display area */
+.section_showcase {
+    justify-content: center;
+    /* Centers content horizontally within flex container */
+    
+    height: 300vh;
+    /* Height set to 300% of viewport height */
+    /* Creates tall section for scroll-based animations */
+    
+    overflow: hidden;
+    /* Hides any content that overflows the section boundaries */
+}
+
+/* Showcase grid layout styling */
+.showcase_grid {
+    grid-column-gap: 1vw;
+    /* Horizontal gap between grid columns - 1% of viewport width */
+    /* vw units make gaps responsive to screen size */
+    
+    grid-row-gap: 1vw;
+    /* Vertical gap between grid rows - 1% of viewport width */
+    
+    grid-template-rows: auto auto;
+    /* Two rows that automatically size based on content */
+    
+    grid-template-columns: 25vw 15vw 27vw 20vw;
+    /* Four columns with responsive widths:
+       - Column 1: 25% of viewport width
+       - Column 2: 15% of viewport width
+       - Column 3: 27% of viewport width
+       - Column 4: 20% of viewport width
+       Total: 87vw + gaps */
+    
+    grid-auto-columns: 1fr;
+    /* Any auto-generated columns will be equal width (1 fraction) */
+    
+    width: 90vw;
+    /* Grid container is 90% of viewport width */
+    
+    display: grid;
+    /* Enables CSS Grid layout system */
+    
+    position: relative;
+    /* Allows absolute positioning of child elements relative to this container */
+}
+
+/* Individual grid item styling */
+.grid_item {
+    background-color: #fff;
+    /* White background color for each grid item */
+    
+    flex-direction: column;
+    /* Arranges child elements vertically */
+    
+    justify-content: space-between;
+    /* Distributes space evenly between child elements */
+    
+    align-items: flex-start;
+    /* Aligns child items to the start (left) of container */
+    
+    width: 100%;
+    /* Grid item takes full width of its grid cell */
+    
+    height: 20rem;
+    /* Fixed height of 20rem (320px if 1rem = 16px) */
+    
+    padding: 1rem;
+    /* 1rem padding on all sides for internal spacing */
+    
+    font-weight: 500;
+    /* Medium font weight for text content */
+    
+    display: flex;
+    /* Enables flexbox layout for grid item children */
+    
+    position: relative;
+    /* Allows absolute positioning of child elements */
+}
+
+/* First grid item - specific positioning */
+.grid_item:nth-child(1) {
+    transform: translate(-10vh, -30vh);
+    /* Moves element left by 10% viewport height and up by 30% viewport height */
+    /* Initial position before scroll animation */
+}
+
+/* Second grid item - specific positioning */
+.grid_item:nth-child(2) {
+    transform: translate(-20vh, -20vh);
+    /* Moves element left by 20vh and up by 20vh */
+    /* Creates staggered starting positions */
+}
+
+/* Third grid item - specific positioning */
+.grid_item:nth-child(3) {
+    transform: translate(5vh, -25vh);
+    /* Moves element right by 5vh and up by 25vh */
+    /* Positive x-value moves right, negative y-value moves up */
+}
+
+/* Fourth grid item - specific positioning */
+.grid_item:nth-child(4) {
+    transform: translate(10vh, -30vh);
+    /* Moves element right by 10vh and up by 30vh */
+}
+
+/* Fifth grid item - specific positioning */
+.grid_item:nth-child(5) {
+    transform: translate(-15vh, 30vh);
+    /* Moves element left by 15vh and down by 30vh */
+    /* Positive y-value moves element down */
+}
+
+/* Sixth grid item - specific positioning */
+.grid_item:nth-child(6) {
+    transform: translate(-10vh, 20vh);
+    /* Moves element left by 10vh and down by 20vh */
+}
+
+/* Seventh grid item - specific positioning */
+.grid_item:nth-child(7) {
+    transform: translate(-5vh, 15vh);
+    /* Moves element left by 5vh and down by 15vh */
+}
+
+/* Eighth grid item - specific positioning */
+.grid_item:nth-child(8) {
+    transform: translate(4vh, 25vh);
+    /* Moves element right by 4vh and down by 25vh */
+}
+
+/* Showcase grid wrapper - container for positioning */
+.showcase_grid-wrapper {
+    flex-direction: column;
+    /* Stacks child elements vertically */
+    
+    justify-content: center;
+    /* Centers content vertically */
+    
+    align-items: center;
+    /* Centers content horizontally */
+    
+    width: 100%;
+    /* Full width of parent container */
+    
+    height: 100vh;
+    /* Height equals 100% of viewport height */
+    
+    display: flex;
+    /* Enables flexbox layout */
+}
+
+/* Showcase heading styling - main title element */
+.showcase_heading {
+    position: absolute;
+    /* Positioned absolutely relative to nearest positioned ancestor */
+    
+    left: 0;
+    /* Aligned to left edge */
+    
+    right: 0;
+    /* Aligned to right edge */
+    /* left: 0 and right: 0 together make element span full width */
+    
+    text-align: center;
+    /* Centers text horizontally */
+    
+    font-size: 8rem;
+    /* Very large font size - 128px (if 1rem = 16px) */
+    
+    background: #ff6a00;
+    /* Solid orange background color as fallback */
+    
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    /* Webkit prefix for older browsers */
+    /* Creates gradient from orange (#ff6a00) to pink (#ee0979) */
+    
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    /* Standard linear gradient - left to right color transition */
+    /* Orange to pink gradient effect */
+    
+    -webkit-background-clip: text;
+    /* Clips background to text shape (webkit prefix) */
+    
+    -webkit-text-fill-color: transparent;
+    /* Makes text transparent to show gradient background */
+    /* This technique creates gradient-filled text effect */
+}
+
+/* SUMMARY OF LAYOUT:
+ * - Grid layout with 4 columns and 2 rows
+ * - 8 grid items positioned with various transforms
+ * - Items initially positioned off-center for animation
+ * - Tall section (300vh) enables scroll-based animations
+ * - Responsive design using vw and vh units
+ * - Centered wrapper with flexbox
+ * - Gradient text heading with modern CSS techniques
+ */

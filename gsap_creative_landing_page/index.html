@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- HTML5 document type declaration -->
+<html lang="en">
+<!-- Root HTML element with English language attribute -->
+
+<head>
+    <!-- Head section contains metadata and links to external resources -->
+    <meta charset="UTF-8">
+    <!-- Character encoding set to UTF-8 for international character support -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport meta tag for responsive design - makes page mobile-friendly -->
+    
+    <title>Document</title>
+    <!-- Page title shown in browser tab -->
+    
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to external CSS stylesheet for styling -->
+</head>
+
+<body>
+    <!-- Body section contains all visible page content -->
+    
+    <div class="container">
+        <!-- Main container div - holds all page content with 95% width and auto margins -->
+        
+        <div class="menu">
+            <!-- Menu/header section for navigation -->
+            
+            <div class="logo">
+                <!-- Logo container -->
+                <img src="./img/lb.png" alt="" />
+                <!-- Logo image - "lb.png" loaded from img folder -->
+            </div>
+        </div>
+        
+        <div class="wrapper">
+            <!-- Wrapper div - contains main content area, uses 100% width and grid layout -->
+            
+            <div class="lwrap">
+                <!-- Left wrapper section for text content, uses 90% width -->
+                
+                <h1 class="elmt">
+                    <!-- Main heading with class "elmt" for animation targeting -->
+                    The Future Of <span>3D Graphics</span> is way to better than anything
+                    <!-- Heading text with span tag around "3D Graphics" for special styling (bold) -->
+                </h1>
+                
+                <p class="elmt">
+                    <!-- Paragraph with class "elmt" for animation -->
+                    Drop your idea and tell the world who you are and what you can do with 3D Graphics
+                    <!-- Description text explaining the page purpose -->
+                </p>
+                
+                <div class="button elmt">
+                    <!-- Button container div with class "elmt" for animation -->
+                    <a href="#" >Apply Now</a>
+                    <!-- Call-to-action link styled as a button -->
+                    
+                    <div class="vdbtn">
+                        <!-- Video button container -->
+                        <img src="./img/vb.svg" alt="" />
+                        <!-- SVG icon for video/play button -->
+                        <p>Watch Demo</p>
+                        <!-- Text label for video button -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rwrap">
+                <!-- Right wrapper section for image carousel/slider -->
+                
+                <div class="img1">
+                    <!-- First image group container with rotation transform -->
+                    <img src="./img/01.jpg" alt="" />
+                    <!-- First image in carousel -->
+                    <img src="./img/2.jpg" alt="" />
+                    <!-- Second image in carousel -->
+                    <img src="./img/3.jpg" alt="" />
+                    <!-- Third image in carousel -->
+                </div>
+                
+                <div class="img1">
+                    <!-- Second image group container (duplicate class for styling) -->
+                    <img src="./img/04.jpg" alt="" />
+                    <!-- Fourth image -->
+                    <img src="./img/05.jpg" alt="" />
+                    <!-- Fifth image -->
+                    <img src="./img/06.jpg" alt="" />
+                    <!-- Sixth image -->
+                </div>
+                
+                <div class="img1">
+                    <!-- Third image group container -->
+                    <img src="./img/07.jpg" alt="" />
+                    <!-- Seventh image -->
+                    <img src="./img/08.jpg" alt="" />
+                    <!-- Eighth image -->
+                    <img src="./img/09.jpg" alt="" />
+                    <!-- Ninth image -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- GSAP (GreenSock Animation Platform) library loaded from CDN for animations -->
+    
+    <script src="script.js"></script>
+    <!-- Link to external JavaScript file containing animation code -->
+</body>
+
+</html>
