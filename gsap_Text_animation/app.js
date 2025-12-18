@@ -79,7 +79,7 @@ gsap.registerPlugin(TextPlugin);
 function loopText() {
     gsap.to("#text", {
         duration: 3,
-        text: "شركة مصافي الوسط",
+        text: "شركة مصافي الوسط - مصفى الدورة",
         ease: "power1.inOut",
       // ease: "back.inOut(1.7)",
       //ease: "steps(12)",

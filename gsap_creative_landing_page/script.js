@@ -108,3 +108,21 @@ tl.to(".img1 img", 1, {
  * This creates an engaging "bounce" effect where images
  * appear, temporarily leave, and then return to stay.
  */
+
+gsap.registerPlugin(TextPlugin);
+
+function loopText() {
+    gsap.to("#text", {
+        duration: 3,
+        text: "وزارة النفط - شركة مصافي الوسط",
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 1,
+        onRepeat: () => {
+            document.getElementById("text").classList.toggle("active");
+        }
+    });
+}
+
+loopText();
