@@ -126,3 +126,18 @@ function loopText() {
 }
 
 loopText();
+
+
+
+
+gsap.registerPlugin(SplitText);
+let split = SplitText.create(".text", { type: "words" });
+
+gsap.from(split.words, {
+  y: -80,
+  autoAlpha: 0,
+  stagger: 0.20,
+  duration: 1,
+  ease: "power4.inout",
+  delay:3
+});
